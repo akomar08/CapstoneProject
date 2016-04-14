@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=size\ ymin\ ymax\ xmin\ xmax
+comment0.target=Point[]\ randomArray(int,\ double,\ double,\ double,\ double)
+comment0.text=\r\n\ Creates\ a\ random\ array\ of\ data\ points\ \r\n\r\n\ @param\ \ \ size\ \ \ \ How\ many\ data\ points\ there\ will\ be\r\n\ @param\ \ \ ymin\ \ \ \ The\ smallest\ possible\ value\ for\ y\ \r\n\ @param\ \ \ ymax\ \ \ \ The\ largest\ possible\ value\ for\ y\r\n\ @param\ \ \ xmin\ \ \ \ The\ smallest\ possible\ value\ for\ x\r\n\ @param\ \ \ xmax\ \ \ \ The\ largest\ possible\ value\ for\ x\r\n\ \r\n\ @return\ \ \ \ An\ array\ of\ Points\r\n
+comment1.params=
+comment1.target=Point[]\ manualArray()
+comment1.text=\r\n\ Creates\ an\ array\ of\ points\ based\ off\ of\ data\ that\ the\ user\ passes\ in\r\n\r\n\ @return\ \ an\ array\ of\ data\ points\r\n
+comment2.params=a
+comment2.target=void\ sort(Point[])
+comment2.text=\r\n\ \ \ \ \ \ \ Sorts\ an\ array,\ using\ merge\ sort.\r\n\ \ \ \ \ \ \ @param\ a\ the\ array\ to\ sort\r\n
+comment3.params=first\ second\ a
+comment3.target=void\ merge(Point[],\ Point[],\ Point[])
+comment3.text=\r\n\ \ \ \ \ \ \ Merges\ two\ sorted\ arrays\ into\ an\ array\r\n\ \ \ \ \ \ \ @param\ first\ the\ first\ sorted\ array\r\n\ \ \ \ \ \ \ @param\ second\ the\ second\ sorted\ array\r\n\ \ \ \ \ \ \ @param\ a\ the\ array\ into\ which\ to\ merge\ first\ and\ second\r\n
+numComments=4
