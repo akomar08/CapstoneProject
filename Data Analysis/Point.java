@@ -43,6 +43,26 @@ public class Point
         // put your code here
         return y;
     }
+    
+    /**
+     * Indicates if another object is equal to this one
+     *
+     * @param   obj the reference object with whic to compare
+     * @return  True if the obj is equal, false if the obj is not equal
+     */
+    public boolean equals(Object obj)
+    {
+        // put your code here
+        if(obj.getClass()==this.getClass())
+        {
+            Point pt = (Point) obj;
+            if(this.x == pt.getX() && this.y == pt.getY())
+            {
+                return true;
+            }
+        }
+        return false;        
+    }
 
     
 }

@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @author Alex Komar
  * @version 4/13/16
  */
-public class arrayMethods
+public class ArrayMethods
 {
     /**
      * Creates a random array of data points 
@@ -30,7 +30,8 @@ public class arrayMethods
         }
         return randArr;
     }
-    
+    
+
     /**
      * Creates an array of points based off of data that the user passes in
      *
@@ -123,14 +124,11 @@ public class arrayMethods
     }
     
     /**
-     * An example of a method - replace this comment with your own
-     *  that describes the operation of the method
+     * Removes one point from an aray
      *
-     * @pre     preconditions for the method
-     *          (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *          (what the method guarantees upon completion)
-     * @param   y   description of parameter y
+     * @post    The specified data point in the array is removed
+     * @param   a   The array that you are removing a point from
+     * @param   pos Which position will be removed from the array
      * @return  description of the return value
      */
     public static void remove(Point[] a,int pos)
@@ -144,7 +142,25 @@ public class arrayMethods
        {
            b[i] = a[i+1];
        }
-       a[] = b[];
+       a = b;
     }
+    
+    /**
+     * Removes any duplicates from an array of data points
+     *
+     * @param   a   The array that is going to be cleaned
+     */
+    public static void clean(Point[] a)
+    {
+        for(int i = 0; i<a.length;i++)
+        {
+            if(a[i].equals(a[i+1]))
+            {
+                remove(a,i+1);
+                i--;
+            }
+        }
+    }
+
 
 }
