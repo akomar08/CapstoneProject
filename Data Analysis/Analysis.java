@@ -19,39 +19,33 @@ public class Analysis
         int totalCount = 0;
         double growthY = a[a.length-1].getY()-a[0].getY();
         int[] breaksY = new int[a.length];
-        double growthX = a[a.length-1].getX()-a[0].getX();
-        int[] breaksX = new int[a.length];
-        int xBreaks = 0;
         int yBreaks = 0;
         for(int i = 0;i<a.length-1;i++)
         {
             //Y Break checker
-            if((a[i+1].getY()-a[i].getY())/growthY > .1)
+            if((a[i+1].getY()-a[i].getY())/((a[i].getY()*a[i].getY())-a[i].getY())*.1 < .1)
             {
                 breaksY[i] = 1;
                 yBreaks++;
             }
         }
+        
         if (yBreaks == 0)
         {
-            yBreaks = a.length;
+            yBreaks = a.length-1;
         }
-        /**
-        for(int i = 0;i<a.length-1;i++)
+        else
         {
-            //X Break checker, will most likely not be used if x grow linearly
-            if((a[i+1].getX()-a[i].getX())/growthX > .1)
-            {
-                breaksX[i] = 1;
-                xBreaks++;
-            }
+            breaksY[breaksY.length-1] = 1;
         }
-        */
-        if(yBreaks>0 && (yBreaks != a.length))
+        
+        System.out.println(yBreaks);
+        
+        if(yBreaks>0 && (yBreaks != a.length-1))
         {
             int i = 0;
-            
-            while (i<a.length)
+            int runCounter = 0;
+            while (i<a.length && runCounter != yBreaks-1)
             {
                 int average = 0;
                 int average2 = 0;
@@ -60,20 +54,29 @@ public class Analysis
                 {
                     average += a[i].getY();
                     i++;
+                    count++;
                 }
-                average /= count;
+                if (count != 0)
+                {
+                    average /= count;
+                }
                 i++;
                 count = 0;
                 while(breaksY[i]!= 1)
                 {
                     average2 += a[i].getY();
                     i++;
+                    count++;
                 }
-                average2 /= count;
+                if (count != 0)
+                {
+                    average2 /= count;
+                }
                 if(average*average == average2)
                 {
                     totalCount+=1;
                 }
+                runCounter++;
             }
         }
         else
@@ -87,7 +90,7 @@ public class Analysis
             }
         }
         
-        if(yBreaks == totalCount)
+        if(Math.abs(yBreaks - totalCount) < 3)
         {
             return true;
         }
