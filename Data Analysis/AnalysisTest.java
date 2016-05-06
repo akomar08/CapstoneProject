@@ -16,8 +16,8 @@ public class AnalysisTest
         for (int i = 1; i<50;i+=3)
         {
             exponentialPoints[i] = new Point(i,Math.pow(2,count));
-            exponentialPoints[i-1] = new Point(i,Math.pow(2,count)-15);
-            exponentialPoints[i-1] = new Point(i,Math.pow(2,count)+15);
+            exponentialPoints[i-1] = new Point(i,Math.pow(2,count)-(Math.pow(2,count)*.01));
+            exponentialPoints[i+1] = new Point(i,Math.pow(2,count)+(Math.pow(2,count)*.01));
         }
         ArrayMethods.sort(randPoints);
         if (Analysis.isExponential(exponentialPoints))

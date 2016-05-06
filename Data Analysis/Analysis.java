@@ -23,7 +23,7 @@ public class Analysis
         for(int i = 0;i<a.length-1;i++)
         {
             //Y Break checker
-            if((a[i+1].getY()-a[i].getY())/((a[i].getY()*a[i].getY())-a[i].getY())*.1 < .1)
+            if((a[i+1].getY()-a[i].getY())/(((a[i].getY()*a[i].getY())-a[i].getY())*.1) > .1)
             {
                 breaksY[i] = 1;
                 yBreaks++;
