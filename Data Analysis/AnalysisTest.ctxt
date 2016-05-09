@@ -1,4 +1,11 @@
 #BlueJ class context
 comment0.params=
-comment0.target=void\ exponentialTest()
-numComments=1
+comment0.target=void\ exactExponentialTest()
+comment0.text=\r\n\ Test\ the\ isExponential\ method\ in\ the\ analysis\ class\ with\ data\ that\ grows\ exactly\ exponential\r\n
+comment1.params=
+comment1.target=void\ nearExponentialTest()
+comment1.text=\r\n\ Test\ the\ isExponential\ method\ in\ the\ analysis\ class\ with\ data\ that\ grows\ in\ groups\ exponentialy\r\n
+comment2.params=
+comment2.target=void\ manualExponentialTest()
+comment2.text=\r\n\ Tests\ the\ isExponential\ method\ in\ analysis\ based\ on\ user\ specified\ data\r\n
+numComments=3

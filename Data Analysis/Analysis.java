@@ -20,12 +20,16 @@ public class Analysis
         double growthY = a[a.length-1].getY()-a[0].getY();
         int[] breaksY = new int[a.length];
         int yBreaks = 0;
+        for (int i = 0;i<breaksY.length;i++)
+        {
+            breaksY[i] = 1;
+        }
         for(int i = 0;i<a.length-1;i++)
         {
             //Y Break checker
             if((a[i+1].getY()-a[i].getY())/(((a[i].getY()*a[i].getY())-a[i].getY())*.1) > .1)
             {
-                breaksY[i] = 1;
+                breaksY[i] = 0;
                 yBreaks++;
             }
         }
@@ -50,7 +54,7 @@ public class Analysis
                 int average = 0;
                 int average2 = 0;
                 int count = 0;
-                while(breaksY[i]!= 1)
+                while(i<breaksY.length&&breaksY[i]== 1)
                 {
                     average += a[i].getY();
                     i++;
@@ -62,7 +66,7 @@ public class Analysis
                 }
                 i++;
                 count = 0;
-                while(breaksY[i]!= 1)
+                while(i<breaksY.length&&breaksY[i]== 1)
                 {
                     average2 += a[i].getY();
                     i++;
@@ -72,24 +76,26 @@ public class Analysis
                 {
                     average2 /= count;
                 }
-                if(average*average == average2)
+                if(average2-(average*average) <= average2*.01)
                 {
                     totalCount+=1;
                 }
                 runCounter++;
+                totalCount = breaksY.length-totalCount;
             }
         }
         else
         {
             for (int i = 0;i<a.length-1;i++)
             {
-                if((a[i].getY()*a[i].getY())==a[i+1].getY())
+                if(a[i+1].getY()-(a[i].getY()*a[i].getY())<a[i+1].getY()*.1)
                 {
                     totalCount++;
                 }
             }
         }
         
+        System.out.println(totalCount);
         if(Math.abs(yBreaks - totalCount) < 3)
         {
             return true;
