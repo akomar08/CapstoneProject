@@ -55,7 +55,8 @@ public class AnalysisTest
             System.out.println("No");
         }
     }
-    
+    
+
     /**
      * Tests the isExponential method in analysis based on user specified data
      */
@@ -65,10 +66,19 @@ public class AnalysisTest
         System.out.println("How many values are going to be in the test data List?");
         int length = s.nextInt();
         Point[] data = new Point[length];
-        for(int i =0; i<length;i++)
+        for(int i =1; i<length+1;i++)
         {
-            System.out.println("What is the value of the" + i+1 +"data point?");
-            data[i] = new Point(i,s.nextInt());
+            System.out.println("What is the value of the " + i +" data point?");
+            data[i-1] = new Point(i,s.nextInt());
+        }
+        ArrayMethods.sort(data);
+        if (Analysis.isExponential(data))
+        {
+            System.out.println("Yes");
+        }
+        else
+        {
+            System.out.println("No");
         }
     }
 

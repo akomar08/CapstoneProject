@@ -1,5 +1,5 @@
 #BlueJ class context
 comment0.params=a
 comment0.target=boolean\ isExponential(Point[])
-comment0.text=\r\n\ Checks\ to\ see\ if\ the\ data\ grows\ exponentialy\r\n\r\n\ @param\ \ \ a\ \ \ An\ array\ of\ Points\ to\ check\ for\ exponentail\ relation\r\n\ @return\ \ returns\ true\ if\ the\ data\ grows\ exponentialy,\ false\ if\ it\ does\ not\ grow\ exponentially\r\n
+comment0.text=\r\n\ Checks\ to\ see\ if\ the\ data\ grows\ exponentialy\r\n\r\n\ @param\ \ \ a\ \ \ An\ array\ of\ Points\ to\ check\ for\ exponentail\ relation.\ The\ data\ must\ be\ sorted\ by\ both\ x\ and\ y\ values\r\n\ @return\ \ returns\ true\ if\ the\ data\ grows\ exponentialy,\ false\ if\ it\ does\ not\ grow\ exponentially\r\n
 numComments=1
