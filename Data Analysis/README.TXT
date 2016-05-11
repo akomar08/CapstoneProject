@@ -13,7 +13,7 @@ AUTHORS: Alex Komar
 USER INSTRUCTIONS:  Run any of the test methods in the AnalysisTest class
 
 
-Explanation: I used loops and boolean algebra in my main loops.
+Explanation: I used loops and boolean algebra in my main loops. I used sorting methods to clean my arrays.
 
 
 Algorithim: My isExponential algorithim worked by first checking to see if the data was grouped any way.
