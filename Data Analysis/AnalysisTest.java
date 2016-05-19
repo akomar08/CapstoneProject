@@ -69,7 +69,7 @@ public class AnalysisTest
         for(int i =1; i<length+1;i++)
         {
             System.out.println("What is the value of the " + i +" data point?");
-            data[i-1] = new Point(i,s.nextInt());
+            data[i-1] = new Point(i,s.nextDouble());
         }
         ArrayMethods.sort(data);
         if (Analysis.isExponential(data))
